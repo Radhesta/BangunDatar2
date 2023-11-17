@@ -24,9 +24,17 @@ class persegi_page extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "Persegi adalah segi empat",
+              "Persegi",
               style: TextStyle(color: Colors.black),
             ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.deepOrange.shade50,borderRadius: BorderRadius.all(Radius.circular(10))
+            ),
+            padding: const EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
+            child: Text("Persegi merupakan turunan dari segi empat yang mempunyai ciri khusus keempat sisinya sama panjang dan keempat sudutnya siku-siku (90°)."),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -69,9 +77,15 @@ class persegi_page extends StatelessWidget {
                 ),
               ],
             ),
-
-          Obx(() => Text(_persegiController.hasil.value,style: TextStyle(color: _persegiController.warna.value),))
-
+          Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue.shade50,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
+              child: Obx(() => Text(
+                _persegiController.hasil.value,
+              )))
         ],
       ),
     );

@@ -1,6 +1,9 @@
 import 'dart:html';
 
+import 'package:bangun_datar_radhesta/page/lingkaran_page.dart';
 import 'package:bangun_datar_radhesta/page/persegi_page.dart';
+import 'package:bangun_datar_radhesta/page/persegi_panjang_page.dart';
+import 'package:bangun_datar_radhesta/page/segitiga_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,23 +35,51 @@ class _home_pageState extends State<home_page> {
                               builder: (context) => persegi_page()));
                     },
                     child: CustomMenu(
-                        imageAsset: "asset/persegi.jpeg", title: "persegi")),
+                        imageAsset: "asset/persegi.jpeg", title: "Persegi")),
               ),
-              Expanded(
-                  child: CustomMenu(
-                      imageAsset: "asset/persegi_panjang.jpeg",
-                      title: "persegi panjang")),
-            ],
-          ),
+
+               Expanded(
+                 child: InkWell(
+                    onTap: (){
+                       Navigator.push(
+                           context,
+                           MaterialPageRoute(
+                              builder: (context) => persegi_panjang_page()));
+                        },
+                      child: CustomMenu(
+                        imageAsset: "asset/persegi_panjang.jpeg", title: "Persegi Panjang")),
+              ),
+              ],
+              ),
           Row(
             children: [
-              CustomMenu(imageAsset: "asset/segitiga.jpeg", title: "segitiga"),
-              CustomMenu(
-                  imageAsset: "asset/lingkaran.jpeg", title: "lingkaran"),
+              Expanded(
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => segitiga_page()));
+                  },
+                  child: CustomMenu(
+                      imageAsset: "asset/segitiga.jpeg", title: "Segitiga")),
+              ),
+
+              Expanded(
+                child: InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LingkaranPage()));
+                    },
+                    child: CustomMenu(
+                        imageAsset: "asset/lingkaran.jpeg", title: "Lingkaran")),
+              ),
             ],
           ),
-        ],
-      ),
+       ],
+     ),
     );
   }
 }

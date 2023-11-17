@@ -13,7 +13,7 @@ class PersegiController extends GetxController{
 
   void hitungKeliling(){
     int hitung = sisi*4;
-    warna.value=Colors.blueGrey;
+    warna.value=Colors.blue;
     hasil.value="Hasil Perhitungan luas dari $sisi X 4 = $hitung";
   }
 }
