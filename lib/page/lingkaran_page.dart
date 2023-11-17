@@ -36,7 +36,7 @@ class LingkaranPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Image.asset(
-                      "assets/lingkaran.jpeg",
+                      "asset/lingkaran.jpeg",
                       height: 150,
                       width: 150,
                     ),
